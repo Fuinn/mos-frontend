@@ -1,0 +1,28 @@
+<form [formGroup]="signupForm">
+    <div class="form-group">
+        <div class="container">
+            <div class="row mt-2">
+                <h3>Account Request</h3>
+            </div>
+            <div class="row mt-2">
+                <label for="email">Email</label>
+                <input type="email" formControlName="email" class="form-control" id="email">
+            </div>
+            <div class="row mt-2">
+                <label for="fname">First name</label>
+                <input type="fname" formControlName="first_name" class="form-control" id="fname">
+            </div>
+            <div class="row mt-2">
+                <label for="lname">Last name</label>
+                <input type="lname" formControlName="last_name" class="form-control" id="lname">
+            </div>
+            <div class="row mt-2">
+                <label for="company">Company</label>
+                <input type="company" formControlName="company" class="form-control" id="company">
+            </div>
+            <div class="row mt-3">
+                <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>

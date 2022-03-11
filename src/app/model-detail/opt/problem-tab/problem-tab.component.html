@@ -1,0 +1,32 @@
+<div class="container-fluid">
+      <div *ngIf="(problem$|async); else elseBlock">
+	<div class="row">
+	  <div class="col">
+
+
+            <!-- Name -->
+            <div class="row mt-4">
+              <div class="col-sm-auto font-weight-bold">Name</div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-sm-auto">{{ (problem$ | async).name }}</div>
+            </div>
+	  </div>
+	</div>
+
+	<!-- State -->
+	<div class="row mt-4 font-weight-bold">
+	  <div class="col-sm-auto">Results</div>
+	</div>
+	<div class="row mt-2">
+	  <div class="col">
+	    <app-problem-state [problem$]="problem$"></app-problem-state>
+	  </div>
+	</div>
+      </div>
+      <ng-template #elseBlock>
+	<div class="row mt-4">
+	  <div class="col-sm-auto">Not available</div>
+	</div>
+      </ng-template>
+</div>

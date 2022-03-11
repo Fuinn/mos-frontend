@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+
+            <div *ngIf="(variable$|async)"> 
+
+                <!-- Name -->
+                <div class="row mt-4">
+                    <div class="col-sm-auto font-weight-bold">Name</div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-auto">{{ (variable$ | async).name }}</div>
+                </div>
+
+                <!-- Description -->
+                <div class="row mt-4 font-weight-bold">
+                    <div class="col-sm-auto">Description</div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-auto" mathjax>{{ (variable$ | async).description }}</div> 
+                </div>
+
+                <!-- Labels -->
+                <div class="row mt-4 font-weight-bold">
+                    <div class="col-sm-auto">Labels</div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-auto">{{ (variable$ | async).labels }}</div>
+                </div>
+
+                <!-- Type -->
+                <div class="row mt-4 font-weight-bold">
+                    <div class="col-sm-auto">Type</div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-auto">{{ (variable$ | async).type }}</div>
+                </div>
+
+                <!-- Shape -->
+                <div class="row mt-4 font-weight-bold">
+                    <div class="col-sm-auto">Shape</div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-auto">{{ (variable$ | async).shape|json }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- State -->
+    <div class="row mt-4 font-weight-bold"> 
+        <div class="col-sm-auto">Results</div>
+    </div>
+    <div class="row mt-2">
+        <div class="col">
+            <app-variable-state [variable$]="variable$"></app-variable-state>
+        </div>
+    </div>
+</div>

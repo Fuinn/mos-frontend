@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row mt-4 ml-1">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Shape</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let v of variables$|async">
+                    <tr>
+                        <td><a [routerLink]="['.', v.id]">{{ v.name }}</a></td>
+                        <td>{{ v.type }}</td>
+                        <td>{{ v.shape|json }}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>

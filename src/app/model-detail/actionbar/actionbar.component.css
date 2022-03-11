@@ -1,0 +1,19 @@
+/* The sidebar menu */
+.sidenav {
+    /*height: 100%; Full-height: remove this if you want "auto" height */
+    width: 150px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 65px;
+    right: 0;
+    background-color: rgb(130, 130, 130);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    float: right;
+}
+  
+.action-button {
+    text-align: center;
+    width: 110px;
+    margin-left: 20px;
+}

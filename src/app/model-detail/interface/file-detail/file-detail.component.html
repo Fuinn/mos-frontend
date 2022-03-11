@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+
+      <div *ngIf="(file$|async) as f">
+
+        <!-- Name -->
+        <div class="row mt-2">
+          <div class="col-sm-auto font-weight-bold">Name</div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-auto">{{ f.name }}</div>
+        </div>
+
+        <!-- Description -->
+        <div class="row mt-4 font-weight-bold">
+          <div class="col-sm-auto">Description</div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-auto">{{ f.description }}</div>
+        </div>
+
+        <!-- Type -->
+        <div class="row mt-4 font-weight-bold">
+          <div class="col-sm-auto">Type</div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-auto">{{ f.type }}</div>
+        </div>
+
+
+        <!-- Filename -->
+        <div class="row mt-4">
+          <div class="col-sm-auto font-weight-bold">Filename</div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-auto">{{ f.filename ? f.filename : 'None' }}</div>
+        </div>
+
+        <!-- Data Size -->
+        <div class="row mt-4 font-weight-bold">
+          <div class="col-sm-auto">Data Size (Bytes)</div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-auto">{{ f.data_size }}</div>
+        </div>
+
+        <!-- Data -->
+        <div class="row mt-4 font-weight-bold">
+          <div class="col-sm-auto">Data File</div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-auto">
+            <div *ngIf="f.type == 'input'; else elseBlock">
+              <button class="btn btn-primary" (click)="downloadFile(f)" 
+                      [disabled]="!f.data">Download</button>
+              <button class="btn ml-2 btn-primary" (click)="uploadFile(f)">Select</button>
+            </div>
+            <ng-template #elseBlock>
+              <button class="btn btn-primary" (click)="downloadFile(f)"
+                      [disabled]="!f.data">Download</button>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

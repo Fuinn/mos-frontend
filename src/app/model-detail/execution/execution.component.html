@@ -1,0 +1,16 @@
+<div *ngIf="(model$|async) as m">
+    <div class="row mt-2">
+        <div class="col">
+
+            <!-- Execution log -->
+            <div class="row">
+                <div class="col-sm-auto font-weight-bold">Execution Log</div>
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                    <textarea name="form-control" id="log" rows="20" width="100%">{{ m.execution_log }}</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

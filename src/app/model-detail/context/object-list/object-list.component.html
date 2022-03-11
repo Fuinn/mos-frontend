@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row mt-4 ml-1">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Data Available</th>
+                    <th>Data Size (Bytes)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let o of objects$|async">
+                    <tr>
+                        <td><a [routerLink]="['.', o.id]">{{ o.name }}</a></td>
+                        <td>{{ o.type }}</td>
+                        <td>{{ o.data ? "yes" : "no" }}</td>
+                        <td>{{ o.data_size }}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>

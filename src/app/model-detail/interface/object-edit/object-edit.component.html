@@ -1,0 +1,24 @@
+<form (ngSubmit)="submit()">
+
+    <!-- Headers -->
+    <div class="modal-header">
+        <h4 class="modal-title">Data Edit</h4>
+    </div>
+
+    <!-- Body -->
+    <div class="modal-body">
+        <!-- Text -->
+        <textarea class="form-control" rows="10" id="data" name="data" 
+                  [(ngModel)]="objData"></textarea>
+    </div>
+
+    <!-- Footer -->
+    <div class="modal-footer mt-2">
+        <button type="submit" class="btn btn-primary">
+            Ok
+        </button>
+        <button type="button" class="btn btn-primary" (click)="activeModal.close('Cancel')">
+            Cancel
+        </button>
+    </div>
+</form>

@@ -1,0 +1,9 @@
+<div class="sidenav sidenav-dark">
+    <div *ngIf="(model$ | async) as m">
+        <button class="btn mt-3 btn-dark action-button">Clear</button>
+        <button class="btn mt-1 btn-dark action-button" [routerLink]="['/models/']" 
+                (click)="deleteModel(m)">Delete</button>
+        <button class="btn mt-1 btn-dark action-button" (click)="runModel(m)">Run</button>
+        <button class="btn mt-1 mb-3 btn-dark action-button">Save</button>
+    </div>
+</div>

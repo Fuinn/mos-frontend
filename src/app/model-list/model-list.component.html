@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row mt-3 ml-1">
+        <button class="btn btn-primary" (click)="uploadModel()">Upload</button>
+    </div>
+    <div class="row mt-3 ml-1">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Owner</th>
+                    <th>System</th>
+                    <th>Status</th>
+                    <th>Created On</th>
+                    <th>Last Start Time</th>
+                    <th>Last End Time</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let model of models$|async">
+                    <tr>
+                        <td><a [routerLink]="['.', model.id]">{{ model.name }}</a></td>
+                        <td>{{ model.owner.username }}</td>
+                        <td>{{ model.system }}</td>
+                        <td>{{ model.status }}</td>
+                        <td>{{ model.time_created | date:'MM/dd/yyyy HH:mm:ss'}}</td>
+                        <td>
+                            <span *ngIf="model.time_start;">{{ model.time_start | date:'MM/dd/yyyy HH:mm:ss'}}</span>
+                            <span *ngIf="!model.time_start;">None</span>
+                        </td>
+                        <td>
+                            <span *ngIf="model.time_end;">{{ model.time_end | date:'MM/dd/yyyy HH:mm:ss'}}</span>
+                            <span *ngIf="!model.time_end;">None</span>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>

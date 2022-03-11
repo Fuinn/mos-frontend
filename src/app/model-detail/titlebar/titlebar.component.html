@@ -1,0 +1,9 @@
+<nav class="navbar navbar-dark static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div *ngIf="(model$|async) as m">
+                <p class="navbar-brand">{{ m.name }}</p>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,7 @@
+<ag-grid-angular 
+    style="width: 100%; height: 500px;" 
+    class="ag-theme-fresh" 
+    [rowData]="states$|async"
+    [columnDefs]="columnDefs"
+    (rowDataChanged)="onDataReady($event)">
+</ag-grid-angular>

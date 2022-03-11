@@ -1,0 +1,30 @@
+<!-- Headers -->
+<div class="modal-header">
+    <h4 class="modal-title">User Info</h4>
+</div>
+
+<!-- Body -->
+<div class="modal-body">
+
+    <!-- Username -->
+    <div class="row">
+        <div class="col-sm-auto font-weight-bold">Username</div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-sm-auto">{{ (token$|async).username }}</div>
+    </div>
+
+    <!-- Token -->
+    <div class="row mt-2">
+        <div class="col-sm-auto font-weight-bold">Token</div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-sm-auto">{{ (token$|async).key }}</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="modal-footer mt-2">
+        <button type="button" class="btn btn-primary" (click)="close()">Close</button>
+    </div>
+
+</div>

@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand static-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/models" routerLinkActive="active">MOS</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="navbar-item active">
+                <div *ngIf="(token$|async) as token">
+                    <button class="btn mt-2 btn-dark action-button" 
+                            (click)="userInfo()">{{ token.username }}</button>
+                </div>
+            </li>
+            <li class="navbar-item active">
+                <button class="btn mt-2 btn-dark action-button" (click)="logout()">Logout</button>
+            </li>
+            <li class="navbar-item">
+                <a class="nav-link" href="https://fuinn.ie" target="_blank">
+                    <img src="assets/logo.png" style="height:35px;">
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

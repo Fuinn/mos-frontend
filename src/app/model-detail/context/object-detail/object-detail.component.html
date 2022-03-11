@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+
+            <div *ngIf="(object$ | async) as o">
+
+                <!-- Name -->
+                <div class="row mt-2">
+                    <div class="col-sm-auto font-weight-bold">Name</div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-auto">{{ o.name }}</div>
+                </div>
+
+                <!-- Description -->
+                <div class="row mt-4 font-weight-bold">
+                    <div class="col-sm-auto">Description</div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-auto">{{ o.description }}</div>
+                </div>
+
+                <!-- Type -->
+                <div class="row mt-4 font-weight-bold">
+                    <div class="col-sm-auto">Type</div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-auto">{{ o.type }}</div>
+                </div>
+
+                <!-- Data Size -->
+                <div class="row mt-4 font-weight-bold">
+                    <div class="col-sm-auto">Data Size (Bytes)</div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-auto">{{ o.data_size }}</div>
+                </div>
+
+                <!-- Data -->
+                <div class="form-group mt-4">
+                    <label class="font-weight-bold" for="source">Data Value</label>
+                    <div *ngIf="data">
+                        <ngx-json-viewer [json]="data" [expanded]="false"></ngx-json-viewer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

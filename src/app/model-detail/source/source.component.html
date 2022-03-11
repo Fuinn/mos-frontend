@@ -1,0 +1,16 @@
+<div *ngIf="(model$|async) as m">
+    <div class="row mt-2">
+        <div class="col">
+
+            <!-- Source code -->
+            <div class="row">
+                <div class="col-sm-auto font-weight-bold">Source Code</div>
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                    <textarea readonly name="form-control" id="source" rows="20" width="100%">{{ m.source }}</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

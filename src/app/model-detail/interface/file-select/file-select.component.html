@@ -1,0 +1,30 @@
+<form [formGroup]="selectForm" (ngSubmit)="submit()">
+
+    <!-- Headers -->
+    <div class="modal-header">
+        <h4 class="modal-title">File Select</h4>
+    </div>
+
+    <!-- Body -->
+    <div class="modal-body">
+
+        <!-- File -->
+        <div class="custom-file mt-2">
+            <input type="file" class="custom-file-input" id="customFile" formControlName="filePath"
+                (change)="changeFile($event)">
+            <label class="custom-file-label" for="customFile">
+                {{ filedata ? filedata.name : "Choose File" }}
+            </label>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="modal-footer mt-2">
+        <button type="submit" class="btn btn-primary" [disabled]="!selectForm.valid">
+            Ok
+        </button>
+        <button type="button" class="btn btn-primary" (click)="activeModal.close('Cancel')">
+            Cancel
+        </button>
+    </div>
+</form>

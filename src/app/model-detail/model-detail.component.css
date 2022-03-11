@@ -1,0 +1,7 @@
+/* Style page content */
+.main {
+  margin-top: 80px;    /* Same as the width of the navbar + titlebar*/
+  margin-left: 150px;  /* Same as the width of the sidebar */
+  margin-right: 150px; /* Same as the width of the actionbar */
+  padding: 20px 10px;
+}

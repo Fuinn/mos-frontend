@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row mt-4 ml-1">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Data Available</th>
+                    <th>Data Size (Bytes)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let f of files$|async">
+                    <tr>
+                        <td><a [routerLink]="['../../interface/files', f.id]">{{ f.name }}</a></td>
+                        <td>file</td>
+                        <td>{{ f.data ? "yes" : "no" }}</td>
+                        <td>{{ f.data_size }}</td>
+                    </tr>
+                </ng-container>
+                <ng-container *ngFor="let o of objects$|async">
+                    <tr>
+                        <td><a [routerLink]="['../../interface/objects', o.id]">{{ o.name }}</a></td>
+                        <td>object</td>
+                        <td>{{ o.data ? "yes" : "no" }}</td>
+                        <td>{{ o.data_size }}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>

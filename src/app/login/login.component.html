@@ -1,0 +1,29 @@
+<form [formGroup]="loginForm">
+    <div class="form-group">
+        <div class="container">
+            <div class="row mt-2">
+                <h3>Login</h3>
+            </div>
+            <div class="row mt-2">
+                <label for="usr">Username</label>
+                <input type="username" formControlName="username" class="form-control" id="usr">
+            </div>
+            <div class="row mt-2">
+                <label for="pwd">Password</label>
+                <input type="password" formControlName="password" class="form-control" id="pwd">
+            </div>
+            <div class="row mt-3">
+                <p>MOS is in beta phase. By clicking Submit, you agree to the MOS <a
+                   href="https://fuinn.ie/mos_terms_of_use.txt" 
+                   target="_blank">Terms of Use</a>.
+                </p>
+            </div>
+            <div class="row mt-0">
+                <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+            </div>
+            <div class="row mt-4">
+                <a [routerLink]="['/signup']">Request an account</a>
+            </div>
+        </div>
+    </div>
+</form>

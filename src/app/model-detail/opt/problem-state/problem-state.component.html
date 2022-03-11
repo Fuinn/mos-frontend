@@ -1,0 +1,18 @@
+<div *ngIf="(state$ | async)">
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Problem Type</th>
+                <th>Number of Rows</th>
+                <th>Number of Columns</th>		
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ (state$|async).kind }}</td>
+                <td>{{ (state$|async).num_constraints }}</td>
+                <td>{{ (state$|async).num_vars }}</td>		
+            </tr>
+        </tbody>
+    </table>
+</div>

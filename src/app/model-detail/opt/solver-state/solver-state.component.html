@@ -1,0 +1,20 @@
+<div *ngIf="(state$ | async)">
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Designation</th>
+                <th>Status</th>
+                <th>Iterations</th>
+                <th>Time (s)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ (state$|async).name }}</td>
+                <td>{{ (state$|async).status }}</td>
+                <td>{{ (state$|async).iterations }}</td>
+                <td>{{ (state$|async).time }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

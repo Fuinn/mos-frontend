@@ -1,0 +1,64 @@
+<div *ngIf="(model$|async) as m">
+    <div class="row mt-2">
+        <div class="col"> 
+
+            <!-- Name -->
+            <div class="row">
+                <div class="col-sm-auto font-weight-bold">Name</div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-auto">{{ m.name }}</div>
+            </div>
+
+            <!-- Modeling system -->
+            <div class="row mt-4 font-weight-bold">
+                <div class="col-sm-auto">System</div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-auto">{{ m.system }}</div>
+            </div>
+
+            <!-- Status -->
+            <div class="row mt-4 font-weight-bold">
+                <div class="col-sm-auto">Status</div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-auto">{{ m.status }}</div>
+            </div>
+
+            <!-- Creation time -->
+            <div class="row mt-4 font-weight-bold">
+                <div class="col-sm-auto">Created On</div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-auto">{{ m.time_created | date:'MM/dd/yyyy HH:mm:ss'}}</div>
+            </div>
+
+            <!-- Start time -->
+            <div class="row mt-4 font-weight-bold">
+                <div class="col-sm-auto">Last Start Time</div>
+            </div>
+            <div class="row mt-2">
+                <div *ngIf="m.time_start" class="col-sm-auto">{{ m.time_start | date:'MM/dd/yyyy HH:mm:ss'}}</div>
+                <div *ngIf="!m.time_start" class="col-sm-auto">None</div>
+            </div>
+
+            <!-- End time -->
+            <div class="row mt-4 font-weight-bold">
+                <div class="col-sm-auto">Last End Time</div>
+            </div>
+            <div class="row mt-2">
+                <div *ngIf="m.time_end" class="col-sm-auto">{{ m.time_end | date:'MM/dd/yyyy HH:mm:ss'}}</div>
+                <div *ngIf="!m.time_end" class="col-sm-auto">None</div>
+            </div>
+
+            <!-- Description -->
+            <div class="row mt-4 font-weight-bold">
+                <div class="col-sm-auto">Description</div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-auto" mathjax>{{ m.description }}</div>
+            </div>
+        </div>
+    </div>
+</div>
