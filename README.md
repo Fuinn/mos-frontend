@@ -40,4 +40,9 @@ The following endpoint is then available and accessible:
 
 ## Docker Deployment
 
-Coming soon.
+* ```./scripts/docker_build.sh```: Builds MOS Frontend image.
+* ```./scripts/docker_run.sh```: Runs MOS Frontend container.
+
+The following endpoint is then available and accessible:
+
+* Web UI: ``localhost:4200``
