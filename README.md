@@ -40,9 +40,8 @@ The following endpoint is then available and accessible:
 
 ## Docker Deployment
 
-* ```./scripts/docker_build.sh```: Builds MOS Frontend image.
-* ```./scripts/docker_run.sh```: Runs MOS Frontend container.
+The following scripts are available for building the image, running the container, and for pushing the image to Docker Hub:
 
-The following endpoint is then available and accessible:
-
-* Web UI: ``localhost:4200``
+* ``./scripts/docker_build.sh``
+* ``./scripts/docker_run.sh``
+* ``./scripts/docker_push.sh``

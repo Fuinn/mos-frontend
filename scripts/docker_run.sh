@@ -2,5 +2,5 @@
 sudo docker run -it \
                 --rm \
                 --network=host \
-                --name mos-frontend \
-                mos-frontend
+                --name=mos-frontend \
+                tomastinoco/mos-frontend
