@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo docker push tomastinoco/mos-frontend
+sudo docker push tomastinoco/mos-demo-frontend
