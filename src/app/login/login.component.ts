@@ -9,7 +9,7 @@ import { selectToken } from '../root-store/root-store.selectors';
 import { TokenGetRequestAction } from '../root-store/root-store.actions';
 import { Token } from '../data-models/token';
 
-import { environment as env } from '../../environments/environment';
+import { environment as env } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login', 
