@@ -3,5 +3,6 @@ export const environment = {
   protocol: 'http',
   backend_ws: 'ws',
   backend_host: 'localhost',
-  backend_port: '8000'
+  backend_port: '8000',
+  login_page: 'login.component.html'
 }; 

@@ -9,9 +9,11 @@ import { selectToken } from '../root-store/root-store.selectors';
 import { TokenGetRequestAction } from '../root-store/root-store.actions';
 import { Token } from '../data-models/token';
 
+import { environment } from 'src/environments/environment';
+
 @Component({
   selector: 'app-login', 
-  templateUrl: './login.component.html',
+  templateUrl: './${environment.login_page}',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
